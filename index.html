@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>find Me!</title>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+	<link rel="stylesheet" type="text/css" href="designer.css">
+</head>
+<body>
+<!-----------로고----------->
+<div class="logo"><a href="main/main.html"><img src="resource/logo.svg"></a></div>
+<!-----------나브----------->
+<nav> 
+    <a id="about" href="about/about.html">About, </a>
+    <a id="project" href="project/project.html">Project, </a>
+    <a id="designer" href="designer/designer.html">Designer! </a>
+    <a id="archive" href="archive/archive.html">Archive. </a>
+</nav>
+<!-----------검색창----------->
+
+<form class="search-box" action="" method="get" id="searchForm" onsubmit="return false;">
+    find 
+        <input class="search-txt" spellcheck="false" type="text" placeholder="name" id="searchInput" autocomplete="off">  !
+</form>
+
+<div id="miniMapContainer">
+    <div id="miniMap"></div>
+    <div id="miniMapViewport"></div> <!-- 사용자 뷰포트를 나타내는 박스 -->
+</div>
+
+
+
+
+<!-----------사람들----------->
+<section class="designer" id="designers">
+
+   
+    <!-----------더미들----------->
+    <div id="dum1" class="people one dummy"></div>
+    <div id="dum2" class="people one dummy"></div>
+    <div id="dum3" class="people one dummy"></div>
+    <div id="dum4" class="people one dummy"></div>
+    <div id="dum5" class="people one dummy"></div>
+    <div id="dum6" class="people one dummy"></div>
+    <div id="dum7" class="people one dummy"></div>
+    <div id="dum8" class="people one dummy"></div>
+    <div id="dum9" class="people one dummy"></div>
+    <div id="dum10" class="people one dummy"></div>
+    <!-----------학생들----------->
+    <div id="st1" class="people one">조가은 <br> Gaeun Cho</div>
+    <div id="st2" class="people one">김도연 <br> Gaeun Cho</div>
+    <div id="st3" class="people one">김민석 <br> Gaeun Cho</div>
+    <div id="st4" class="people one">조연우 <br> Gaeun Cho</div>
+    <div id="st5" class="people one">이세영 <br> Gaeun Cho</div>
+    <div id="st6" class="people one">민경서 <br> Gaeun Cho</div>
+    <div id="st7" class="people one">이휘경 <br> Gaeun Cho</div>
+    <div id="st8" class="people one">전은빈 <br> Gaeun Cho</div>
+    <div id="st9" class="people one">김혜진 <br> Gaeun Cho</div>
+    <div id="st10" class="people one">김송하 <br> Gaeun Cho</div>
+    <div id="st11" class="people one">김도연 <br> Gaeun Cho</div>
+    <div id="st12" class="people one">김민석 <br> Gaeun Cho</div>
+    <div id="st13" class="people one">조가은 <br> Gaeun Cho</div>
+    <div id="st14" class="people one">조가은 <br> Gaeun Cho</div>
+    <div id="st15" class="people one">조가은 <br> Gaeun Cho</div>
+    <div id="st16" class="people one">조가은 <br> Gaeun Cho</div>
+    <div id="st17" class="people one">조가은 <br> Gaeun Cho</div>
+    <div id="st18" class="people one">조가은 <br> Gaeun Cho</div>
+    <div id="st19" class="people one">조가은 <br> Gaeun Cho</div>
+    <div id="st20" class="people one">조가은 <br> Gaeun Cho</div>
+    <div id="st21" class="people one">조가은 <br> Gaeun Cho</div>
+    <div id="st22" class="people one">조가은 <br> Gaeun Cho</div>
+    <div id="st23" class="people one">조가은 <br> Gaeun Cho</div>
+    <div id="st24" class="people one">조가은 <br> Gaeun Cho</div>
+    <div id="st25" class="people one">조가은 <br> Gaeun Cho</div>
+    <div id="st26" class="people one">조가은 <br> Gaeun Cho</div>
+    <div id="st27" class="people one">조가은 <br> Gaeun Cho</div>
+    <div id="st28" class="people one">조가은 <br> Gaeun Cho</div>
+    <div id="st29" class="people one">조가은 <br> Gaeun Cho</div>
+    <div id="st30" class="people one">조가은 <br> Gaeun Cho</div>
+    <div id="st31" class="people one">조가은 <br> Gaeun Cho</div>
+    <div id="st32" class="people one">조가은 <br> Gaeun Cho</div>
+    <div id="st33" class="people one">조가은 <br> Gaeun Cho</div>
+    <div id="st34" class="people one">조가은 <br> Gaeun Cho</div>
+    <div id="st35" class="people one">조가은 <br> Gaeun Cho</div>
+    <div id="st36" class="people one">조가은 <br> Gaeun Cho</div>
+    <div id="st37" class="people one">조가은 <br> Gaeun Cho</div>
+    <div id="st38" class="people one">조가은 <br> Gaeun Cho</div>
+    <div id="st39" class="people one">조가은 <br> Gaeun Cho</div>
+    <div id="st40" class="people one">조가은 <br> Gaeun Cho</div>
+    <div id="st41" class="people one">조가은 <br> Gaeun Cho</div>
+    <div id="st42" class="people one">조가은 <br> Gaeun Cho</div>
+    <div id="st43" class="people one">조가은 <br> Gaeun Cho</div>
+    <div id="st44" class="people one">조가은 <br> Gaeun Cho</div>
+    <div id="st45" class="people one">조가은 <br> Gaeun Cho</div>
+    <div id="st46" class="people one">조가은 <br> Gaeun Cho</div>
+    <div id="st47" class="people one">조가은 <br> Gaeun Cho</div>
+    <div id="st48" class="people one">조가은 <br> Gaeun Cho</div>
+    <div id="st49" class="people one">조가은 <br> Gaeun Cho</div>
+    <div id="st50" class="people one">조가은 <br> Gaeun Cho</div>
+    <div id="st51" class="people one">조가은 <br> Gaeun Cho</div>
+    <div id="st52" class="people one">조가은 <br> Gaeun Cho</div>
+    <div id="st53" class="people one">조가은 <br> Gaeun Cho</div>
+    <div id="st54" class="people one">조가은 <br> Gaeun Cho</div>
+    <div id="st55" class="people one">조가은 <br> Gaeun Cho</div>
+    <div id="st56" class="people one">조가은 <br> Gaeun Cho</div>
+    <div id="st57" class="people one">조가은 <br> Gaeun Cho</div>
+    <div id="st58" class="people one">조가은 <br> Gaeun Cho</div>
+    <div id="st59" class="people one">조가은 <br> Gaeun Cho</div>
+    <div id="st60" class="people one">조가은 <br> Gaeun Cho</div>
+    <div id="st61" class="people one">조가은 <br> Gaeun Cho</div>
+    <div id="st62" class="people one">조가은 <br> Gaeun Cho</div>
+    <div id="st63" class="people one">조가은 <br> Gaeun Cho</div>
+    <div id="st64" class="people one">조가은 <br> Gaeun Cho</div>
+</section>
+
+   
+<div class="modal indi">
+    <div class="indi_popup"> 
+        <div class="image_container">
+            <img src="resource/bg/il-bg6.png" alt="background image">
+        </div>
+        <div class="name">
+            <p id="ename">Eng name</p>
+            <p id="kname">한글 이름</p>
+        </div>
+        <div class="close_btn"> <img class="close_img" src="resource/close.svg"></div>
+        <!-- grid -->
+        <div class="grid">
+            <!-- left -->
+            <div class="left">
+                <img id="profile" src="scan/17100818_3.webp" class="prof_img">
+            </div>
+
+            <!-- center -->
+            
+            <div class="center">
+                <div class="image-container">
+                    <img id="exThumb" alt="Image 1" class="center-img work ex" >
+                    <p id="exTitle" class="caption"></p>
+                </div>
+                <div class="image-container" style="margin-top: 2vh;">
+                    <img id="conThumb" alt="Image 2" class="center-img work con">
+                    <p id="conTitle" class="caption"></p>
+                </div>
+                <div class="head-container">
+                    <svg id="box1_x5F_head" class="head1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110.8 32.5">
+                        <defs>
+                          <style>
+                            .head1 {
+                              fill: red;
+                            }
+                          </style>
+                        </defs>
+                        <g id="box1_x5F_head-2" data-name="box1_x5F_head">
+                          <polygon class="cls-1" points="100.3 0 10.5 0 0 10.5 0 32.5 55 32.5 55.8 32.5 110.8 32.5 110.8 10.5 100.3 0"/>
+                        </g>
+                      </svg>
+                    <div class="head-text">/projects</div>
+                </div>
+            </div>
+            
+            <!-- right -->
+            <div class="right">
+                <div class="head-container">
+                    <svg id="box2_x5F_head" class="head2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76.8 32.5">
+                        <defs>
+                          <style>
+                            .head2 {
+                              fill: #ff0;
+                            }
+                          </style>
+                        </defs>
+                        <g id="box2_x5F_head-2" data-name="box2_x5F_head">
+                          <polygon class="cls-2" points="66.3 0 10.5 0 0 10.5 0 32.5 76.8 32.5 76.8 10.5 66.3 0"/>
+                        </g>
+                      </svg>
+                    <div class="head-text" >/Q&A</div>
+                </div>
+                <div class="scroll-container">
+                    <div class="text q">
+                        <p>나는 어떤 매력을 갖고 있나요?</p>
+                        <p>What's the appeal <pre></pre>of Me!</p>
+                    </div>
+                    <div class="text a">
+                        <p id="prompt1"></p>
+                        <p id="prompt1_eng"></p>
+                    </div>
+                    <div class="text q">
+                        <p>나를 표현하는 아이템들</p>
+                        <p>Items that <pre></pre>say Me!</p>
+                    </div>
+                    <div class="text a">
+                        <p id="prompt2"></p>
+                        <p id="prompt2_eng"></p>
+                    </div>
+                    <div class="text q">
+                        <p>나의 색상</p>
+                        <p>My Color</p>
+                    </div>
+                    <div class="text a">
+                        <p id="color"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contact">
+            <p class="arrow">▲</p>
+            <p style="margin-top: -5px;">Contact Me!</p>
+            <div class="new-content">
+                <p class="arrow2">▼</p>
+                <p class="line">Instagram</p>
+                <p id="insta"></p>
+                <p class="line">Mail</p>
+                <p id="email">hyodoreu@gmail.com</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal ex">
+    <div class="work_popup"> 
+        <div class="row">
+            <section class="box1">
+                <img id="exFull" class="work_img">
+            </section>
+            <section class="box2">
+                <div class="title">
+                    <p id="exTitle">제목</p>
+                    <p id="kname">이름</p>
+                    <div class="close_btn"> <img class="close_img" src="resource/close.svg"></div> 
+                </div>
+                <div class="text">
+                    <div class="detail">
+                        <p id="exTextK">설명</p>
+                        <p id="exTextE">설명</p>
+                    </div>  
+                </div>
+                <div class="row btnrow">
+                    <div class="button" id="otherWork">Other work</div>
+                    <div class="button" id="findWho">find <span id="nick">OO</span>!</div>
+                </div> 
+                <div class="peekabu" id="people_pkb"><img id="profile"></div>
+                <div class="peekabu" id="work_pkb"><img id="conThumb"></div>
+            </section>
+        </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal con">
+    <div class="work_popup"> 
+        <div class="row">
+            <section class="box1">
+                <img id="conFull" class="work_img">
+            </section>
+            <section class="box2">
+                <div class="title">
+                    <p id="conTitle">제목</p>
+                    <p id="kname">이름</p>
+                    <div class="close_btn"> <img class="close_img" src="resource/close.svg"></div> 
+                </div>
+                <div class="text">
+                    <div class="detail">
+                        <p id="conTextK">설명</p>
+                        <p id="conTextE">설명</p>
+                    </div>  
+                </div>
+                <div class="row btnrow">
+                    <div class="button" id="otherWork">Other work</div>
+                    <div class="button" id="findWho">find <span id="nick">OO</span>!</div>
+                </div> 
+                <div class="peekabu" id="people_pkb"><img id="profile"></div>
+                <div class="peekabu" id="work_pkb"><img id="exThumb"></div>
+            </section>
+        </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- 바디 맨 아래에 첨부할 것 -->
+<footer class="footerback">
+    <span id="footer2">SEOULTECH VISUAL COMMUNICATION DESIGN 42ST GRADUATION EXHIBITION WEBSTIE ‘FIND ME!’
+        <br>2024ⓒSeoul National University of Science and Technology. All Rights Reserved.</span>
+    <div class="logo_footer">
+        <img style="margin-right: 8px;" src="resource/logo_tech.svg">
+        <img style="height: 60px;" src="resource/logo_footer.svg">
+    </div>
+</footer>
+    <script src="designer.js" type="text/javascript"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
