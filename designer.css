@@ -1,0 +1,679 @@
+/*서체 별 유니코드 지정하기*/
+/*영어, 숫자, 특수문자는 헵타*/
+@import url('https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@400;500;600&display=swap');
+
+@font-face {
+  font-family: "Pretendard Variable";
+  src: url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.woff2') format('woff2-variations');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+::-webkit-scrollbar {
+
+    display: none /* 스크롤바를 항상 표시 */;
+}
+
+/* 스크롤바의 트랙 (스크롤바 배경) */
+::-webkit-scrollbar-track {
+    background: #ffffff; /* 트랙 배경 색 */
+}
+
+/* 스크롤바의 막대 (thumb) */
+::-webkit-scrollbar-thumb {
+    background-color: #ABACAD; /* 막대 색 */
+    border-radius: 10px; /* 둥근 모서리 */
+    border: 3px solid #ffffff;
+}
+
+/* 막대가 호버(hover)될 때 색상 변경 */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #000000;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+body{font-size: calc(0.5vw + 0.5rem);
+    line-height: 150%;
+    font-family: 'Hepta Slab', 'Pretendard Variable';
+word-break: keep-all;
+margin:0;
+overscroll-behavior: none;
+height: 1000px;
+background-color: #E0FC61;}
+
+body ::selection {
+    background-color: #000000;
+    }
+
+h2{
+    text-align: center;
+}
+h1,h2,h3,h4,h5{padding: 0px; margin: 0;}
+section{margin: 0; padding: 0;}
+
+
+
+
+/*-------로고-------*/
+.logo{z-index: 100;
+width: 200px; position: fixed; top: 60vh; right: 2.5vw;}
+
+
+/*-------나브-------*/
+nav{position: fixed; text-align: right;
+    right: 0; top: 0;
+  margin-top: 30px;
+  margin-right: 2.5vw;
+  font-family: "Hepta Slab", serif;     
+  font-weight: 500;
+  font-size: 3em;
+  z-index: 100;
+  letter-spacing :-0.02em;
+  display: flex;}
+a{text-decoration: none; color: #000000;}
+nav a{margin-left: 10px;}
+#about{width: 4em;}
+#project{width: 4.05em;}
+#designer{width: 4.9em;}
+#archive{width: 4.3em;}
+
+/*-------필터링-------*/
+.search-box{z-index: 20; position: fixed; top: 150px; left: 150px;  display: flex; /* flexbox를 사용하여 자식 요소를 정렬 */
+    justify-content: center; /* 자식 요소를 수평 가운데 정렬 */
+    align-items: center; /* 자식 요소를 수직 가운데 정렬 */ width: 320px; font-size: 48px; font-weight: 500; gap: 10px;}
+.search-txt{ background: white; color: black; font-family: 'Hepta Slab'; width: 100%; /* 입력 필드의 너비를 100%로 설정 */
+    padding: 8px; /* 패딩을 추가하여 입력 필드 안쪽에 여백 추가 */
+    font-size: 30px; /* 글꼴 크기 조정 */
+    font-weight: 500;
+    text-align: center; /* 텍스트 가운데 정렬 */
+    box-sizing: border-box; /* 패딩이 포함되도록 설정 */}
+#designers{ transition: transform 0.1s ease ; /* 애니메이션 효과 */}
+
+/*----------인풋------------*/
+input{
+    border: 3px solid #000; /* 아래쪽에만 5px 두께의 검은색 테두리 추가 */
+    padding: 10px; /* 패딩 추가 (선택 사항) */
+    font-size: 16px; /* 폰트 크기 설정 (선택 사항) */
+    text-decoration: none;
+}
+.result{position: fixed; top: 250px; left: 150px;}
+
+/* 포커스 시 테두리 및 그림자 제거 */
+input:focus {
+    outline: none; /* 포커스 테두리 제거 */
+    box-shadow: none; /* 박스 그림자 제거 */  
+    text-decoration: none;
+    
+}
+
+/* 자동완성 필드 스타일 (Webkit 기반 브라우저) */
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+    background-color: transparent !important; /* 배경색 제거 */
+    color: inherit !important; /* 텍스트 색상 상속 */
+    box-shadow: 0 0 0px 1000px transparent inset !important; /* 박스 그림자 제거 */
+}
+
+/* 자동완성 필드 스타일 (Firefox) */
+input:-moz-autofill,
+input:-moz-autofill:focus {
+    background-color: transparent !important; /* 배경색 제거 */
+    color: inherit !important; /* 텍스트 색상 상속 */
+}
+
+/* Placeholder 텍스트 스타일 */
+input::placeholder {
+    color: #888888; /* 원하는 색상으로 변경 */
+    opacity: 1; /* 완전히 불투명하게 설정 */
+}
+input:focus::placeholder {
+    color: transparent; /* 포커스 시 placeholder 텍스트 숨기기 */}
+  
+.designer{display: block; top: calc(50vh - 1500px); left: calc(50vw - 2250px); width: 4700px; height: 2840px; min-height:1500px; background-color: #E0FC61; cursor: grab;}
+.designer:active {
+    cursor: grabbing;
+  }
+.people.one{ user-select: none; width: 100px; min-height: 250px; font-size: 14px; line-height: 19px; display: flex; align-items: center;text-align: center; flex-direction: column; color: #00000000; background-size: contain; background-repeat: no-repeat; background-position: center; position: absolute;}
+.people.one:hover{color: #000000; cursor: zoom-in; z-index: 10;}
+.name{filter: blur(0rem);}
+
+
+/*------학생위치------*/
+#dum1{top: -90px; left: 30px; width: 110px; background-image: url(resource/st/dummy_cx.png);}
+#dum2{top: -100px; left: 900px; width: 110px;background-image: url(resource/st/dummy_ux.png);}
+#dum3{top: 970px; left: 30px; width: 110px;background-image: url(resource/st/dummy_id.png);}
+#dum4{top: -160px; left: 2270px; width: 110px;background-image: url(resource/st/dummy_ed.png);}
+#dum5{top: 500px; left: 1020px; width: 110px;background-image: url(resource/st/dummy_il.png);}
+#dum6{top: -130px; left: 360px; width: 110px;background-image: url(resource/st/dummy_vd.png);}
+#dum7{top: -20px; left: 1290px;width: 110px;background-image: url(resource/st/dummy_ed.png);}
+#dum8{top: -110px; left: 1600px; width: 110px;background-image: url(resource/st/dummy_il.png);}
+#dum9{top: -20px; left: 1850px;width: 110px;background-image: url(resource/st/dummy_id.png);}
+#dum10{top: -120px; left: 2680px;width: 110px;background-image: url(resource/st/dummy_ed.png);}
+
+
+#st1{top: 1300px; left: 4360px; width: 120px;}
+#st1:hover{width: 90px;}
+#st2{width: 95px; height: 285px; top: 430px; left: 4210px;}
+#st3{top: 200px; left: 2965px;}
+#st4{top: 730px; left: 470px; width: 85px;}
+#st5{top: 1080px; left: 2900px;}
+#st6{top: 2120px; left: 230px;}
+#st7{top: 648px; left: 1290px;}
+#st8{top: 755px; left: 1620px;width: 95px;}
+#st9{top: 1660px; left: 1900px; width: 90px; height: 280px;}
+#st10{top: 986px; left: 1835px; }
+
+#st11{top: 2050px; left: 1200px;}
+#st12{top: 150px; left: 1540px;width: 80px;}
+#st13{top: 1860px; left: 1570px; }
+#st14{top: 1400px; left: 210px;}
+#st15{top: 1235px; left:1210px;}
+#st16{top: 761px; left: 2120px;}
+#st17{top: 270px; left: 1810px;}
+#st18{top: 240px; left: 120px;}
+#st19{top: 435px; left: 2700px; width: 105px;}
+#st20{top: 1534px; left: 1296px; }
+
+#st21{top: 2210px; left: 3850px;  width: 108px; }
+#st22{top: 1390px; left: 3170px;}
+#st23{top: 1140px; left: 1550px;}
+#st24{top: 775px; left: 992px;}
+#st25{top: 1090px; left: 380px;}
+#st26{top: 200px; left: 870px; width: 95px; height: 285px;}
+#st27{top: 1284px; left: 1970px;}
+#st28{top: 450px; left: 1560px; width: 85px;}
+#st29{top: 1370px; left: 2600px;}
+#st30{top: 915px; left: 4050px;}
+
+#st31{top: 216px; left: 1216px;}
+#st32{top: 590px; left: 750px;}
+#st33{top: 1460px; left: 900px;}
+#st34{top: 2160px; left: 3010px;}
+#st35{top: 2200px; left: 1800px;}
+#st36{top: 1530px; left: 2260px;}
+#st37{top: 170px; left: 2140px;}
+#st38{top: 920px; left: 680px;}
+#st39{top: 1080px; left: 930px;}
+#st40{top: 943px; left: 1310px;}
+
+#st41{top: 220px; left: 2480px;}
+#st42{top: 1830px; left: 2540px;}
+#st43{top: 1760px; left: 530px; width: 105px;}
+#st44{top: 1330px; left: 600px; height: 285px; width: 93px;}
+#st45{top: 1080px; left: 2270px;}
+#st46{top: 1970px; left: 2180px;}
+#st47{top: 900px; left: 3320px;}
+#st48{top: 260px; left: 3450px;}
+#st49{top: 590px; left: 190px;}
+#st50{top: 600px; left: 3690px;}
+
+#st51{top: 460px; left: 3200px;}
+#st52{top: 700px; left: 2920px;}
+#st53{top: 1800px; left: 3480px;}
+#st54{top: 2200px; left: 700px;}
+#st55{top: 350px; left: 440px;}
+#st56{top: 1800px; left: 970px;}
+#st57{top: 200px; left: 3900px; width: 90px;}
+#st58{top: 1300px; left: 3710px;}
+#st59{top: 80px; left: 590px;}
+#st60{top: 830px; left: 2550px;}
+
+#st61{top: 560px; left: 1920px;}
+#st62{top: 1720px; left: 2970px;}
+#st63{top: 1410px; left: 1650px;}
+#st64{top: 490px; left: 2320px; width: 90px;}
+
+
+/*------푸터-------*/
+.footerback{
+    z-index: 10;
+    box-sizing: border-box;
+    padding-left: 2.5vw;
+    padding-right: 2.5vw;
+    position: fixed;
+    bottom: 0;
+    height: 100px;
+    width: 100vw;
+    background-color: white;
+    color:#ABACAD;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;}
+.logo_footer{ height: 40px;  display: flex; align-items: center;}
+
+
+#miniMapContainer {
+    position: fixed;
+    top: 150px;
+    right: 2.5vw;
+    width: 20vw;
+    height: 20vh;    background-color: transparent;
+    z-index: 19; /* 다른 요소 위에 표시 */
+}
+
+#miniMap {
+    position: absolute;
+    width: 100%; /* 미니 맵 전체 크기 */
+    height: 100%; /* 미니 맵 전체 크기 */
+    z-index: 1; /* 점보다 아래에 위치 */
+}
+
+#miniMapViewport {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.3); /* 반투명 배경 */
+    border: 2px solid white; /* 현재 보이는 영역 테두리 */
+    z-index: 2; /* 점보다 위에 위치 */
+    width: 10%; /* 초기 폭 */
+    height: 10%; /* 초기 높이 */
+
+    
+}
+
+
+
+body ::selection {
+    background-color: #000000;
+    color: #E0FC61;
+    }
+
+
+.caption{
+    font-family: 'Hepta Slab','Pretendard Variable';
+}
+section div header section{margin: 0; padding: 0;}
+body{
+    line-height: 150%; 
+    font-size: calc(0.5vw + 0.5rem);
+    font-family: 'Hepta Slab','Pretendard Variable';
+    font-weight: 600;
+    word-break: keep-all;
+}
+div::-webkit-scrollbar {
+    display: none;
+} 
+section::-webkit-scrollbar {
+    display: none;
+} 
+   
+
+.row{width: 100%; display: flex;}
+
+/* -------- 홈 -------- */
+
+
+.logo{
+    z-index: 1000;
+    user-select: none;
+    width: 200px; 
+    position: fixed; 
+    top: 60vh; 
+    right: 2.5vw;
+}
+/* -------- 팝업창 -------- */
+.modal {
+/*팝업 배경*/
+z-index: 20;
+    display: none; /*평소에는 보이지 않도록*/
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow-y: hidden;
+    background: rgba(0,0,0,0.5);
+}
+.modal.on {
+    display: block;
+}
+.modal .indi_popup {
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+height: 90vh;
+width: 85vw;
+background: #ffffff;
+overflow: hidden;
+}
+.image_container {
+position: absolute;
+bottom: -20%;
+left: -30%;
+width: 150%;
+height: 100%;
+z-index: -100; /* 이미지가 배경처럼 보이도록 하려면 z-index를 낮게 설정 */
+}
+
+.image_container img {
+width: 100%;
+height: 100%;
+object-fit: cover; /* 이미지가 div를 채우도록 설정 */
+}
+.close_btn{
+    position: fixed;
+    right:1vw;
+    top: 2vh;
+    font-size: 1.4rem;
+    font-weight: 500;
+    font-family: 'Pretendard Variable';
+
+}
+.name{
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    position: absolute;
+    top:20px;
+    margin-left: 2vw;
+}
+.grid{
+    padding:20px;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 23vw 24vw 22.1vw;
+    grid-template-rows: 1fr;
+    column-gap: 4vw;
+    bottom: 8vh;
+    position: absolute;
+    grid-template-areas: "left center right";
+    align-items: end; 
+}
+.left {
+    grid-area: left;    
+    cursor: default;
+    letter-spacing: -0.03em;
+    margin-bottom: -20%;
+}
+.prof_img{
+    width: 83%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 2%;
+    margin-left: 2vw;
+}
+* {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+}
+.center {
+
+    grid-area: center;
+    height: 64vh;
+    display: grid;
+    grid-template-rows: repeat(2, min-content) 1fr;
+    justify-items: center;
+    align-items: center;
+    padding: 20px;
+    font-weight: 600;
+    position: relative;
+}
+.head-container {
+    position: absolute;
+    bottom: 99.9%;
+    left: 0; 
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    width: auto; 
+    text-align: center; 
+    overflow: visible;
+    z-index: 1;
+}
+
+.head1 {
+    width: 35%;
+    height: auto; 
+    position: relative;
+    justify-items: center;
+}
+.head2 {
+    width: 24%;
+    height: auto; 
+    position: relative;
+    justify-items: center;
+    
+}
+.head-text {
+    margin-left: 0.8vw;
+    position: absolute; 
+    text-align: center;
+    z-index: 1;
+}
+.image-container {
+    text-align: center;
+    width: 94%;
+    display: grid;
+    justify-items: left;
+}
+.center-img {
+    aspect-ratio: 16/9;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.caption {
+    margin-top: 2px;
+    color: rgb(0, 0, 0);
+    align-items: left;
+    align-content: left;
+}
+
+.right {
+    position: relative;
+    grid-area: right;
+    background-color: #1ce157;
+    height: 70vh;
+    scrollbar-width: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    font-weight: 600;
+}
+
+.scroll-container {
+    height: calc(70vh - 10px);        
+    overflow-y: auto;
+}
+.text {
+    color: rgb(0, 0, 0);
+    text-align: left; 
+    line-height: 1.6;
+    width: 12.5vw;
+    word-break: keep-all;
+}
+.right .q{
+   text-align: left; 
+}
+.right .a{
+    margin-left: 7.4vw;
+    margin-bottom: 2vh;
+}
+.contact {
+width: 15vw;
+height: 5vh;
+position: fixed;
+background-color: #E0FC61;
+bottom: 0;
+right: 8vw;
+text-align: center;
+font-size: 1rem;
+transition: height 0.3s;
+}
+
+.arrow {
+font-size: 0.7rem;
+}
+
+.contact p {
+margin: 0;
+transition: opacity 0.3s;
+}
+
+.new-content {
+display: none;
+opacity: 0;
+transition: opacity 0.3s;
+padding-bottom: 20px;
+}
+
+.contact:hover {
+height: auto;
+}
+
+.contact:hover > p:not(.new-content) {
+display: none; /* 기존 컨텐츠 숨기기 */
+}
+
+.contact:hover .new-content {
+display: block;
+opacity: 1;
+}
+
+.line {
+text-decoration-line: underline;
+}
+
+.arrow2 {
+font-size: 0.7rem;
+}
+
+
+.no-scroll {
+overflow: hidden;
+}
+
+
+
+
+
+@media (max-width: 768px) and (orientation: portrait) {
+    body{background-color: red;
+    width: 100vw;}
+
+    .logo{
+        z-index: 1000;
+        width: 140px; 
+        }
+
+    ::-webkit-scrollbar {
+        display: none; /* 스크롤바를 항상 표시 */;
+    }
+
+
+    #miniMapContainer {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 2.5vw;
+        width: 20vw;
+        height: 80vh;    background-color: transparent;
+        z-index: 1000; /* 다른 요소 위에 표시 */
+    }
+
+    #dum1{display: none;}
+#dum2{display: none;}
+#dum3{display: none;}
+#dum4{display: none;}
+#dum5{display: none;}
+#dum6{display: none;}
+#dum7{display: none;}
+#dum8{display: none;}
+#dum9{display: none;}
+#dum10{display: none;}
+
+    nav{position: fixed; 
+        text-align: right;
+        right: 0; top: 0;
+    width: 100%;
+      margin-top: 10px;
+      margin-right: auto; 
+      font-size: 3.5em;
+      z-index: 100;
+      letter-spacing :-0.02em;
+      display: flex;
+      flex-direction: column;
+      align-items: center
+    }
+      nav a {margin-top: 1rem; right: 0; height: 30px;}
+      a{text-decoration: none; color: #000000;}
+      #about{width: 3.5em;}
+      #project{width: 4.05em;}
+      #designer{width: 4.9em;}
+      #archive{width: 4.3em;}
+
+      .footerback{
+        box-sizing: border-box;
+        padding-left: 4.5vw;
+        padding-right: 4.5vw;
+        top: calc(100vh - 100px);
+        height: 100px;
+        width: 100vw;
+        background: white;
+        color:#ABACAD;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        font-weight: 500;
+        position: fixed;
+    }
+    .logo_footer{ width: 25%; height: 65px;  display: flex; align-items: center; transform: scale(0.7);}
+
+    .search-box{display: none; left: 20px; z-index: 50; position: fixed;}
+
+
+    .designer {
+        width: 100vw;
+        height: auto;
+        background-color: #E0FC61;
+        display: grid;
+        padding-bottom: 200px;
+        padding-top: 200px;
+      
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto; 
+        justify-items: center;
+    }
+    .people.one{position: relative; min-height: 0px; font-size: 16px; line-height: 24px;}
+
+    [id^="st"] {
+        height: 300px;
+        top: unset !important;
+        left: unset !important;
+      }
+#st1{    height: 310px;}
+#st3{    height: 288px;}
+#st9{width: 90px;
+    height: 310px;}
+      #st10 {width: 93px;}
+      #st12 {
+        height: 340px;}
+      #st19{width: 100px;}
+      #st21 {
+        width: 118px;
+        height: 338px;
+    }
+#st26{
+    height: 274px;}
+      #st28 {
+        height: 322px;}
+      #st44{height: 262px; width: 95px;}
+      #st47 {
+        height: 310px;}
+      #st50 {
+        width: 110px;
+        height: 275px;}
+        #st51 {
+            height: 287px;
+            width: 108px;}
+      #st57 {width:100px;}
+      #st54 {
+        height: 318px;
+        width: 95px;}
+        #st59 {
+            height: 307px;
+            width: 102px;}}
