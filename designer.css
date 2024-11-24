@@ -552,18 +552,40 @@ overflow: hidden;
 
 
 @media (max-width: 768px) and (orientation: portrait) {
-    body{background-color: red;
+    body{
     width: 100vw;}
-
+    .modal .indi_popup{height: 100vh; width: 100vw; z-index: 101;}
+    .grid{font-size:12pt; display: flex; flex-direction: column; padding-bottom: 10vh; overflow-y: scroll; bottom: unset; align-items: center; gap: 80px;height: 100vh;}
+.right{width: 100%; height: unset;}
+.left{margin: unset;     margin-bottom: 20%;}
+        .name{margin-left: 20px;}
     .logo{
         z-index: 1000;
         width: 140px; 
         }
-
+        .image_container {
+            position: fixed;
+        }
+    .text{width: unset;}
+    .head-text{margin-left: 3vw;}
+    .caption{margin-top: 8pt;}
+.prof_img{height: 75vh; width: unset; margin: unset; margin-top: 10vh;}
     ::-webkit-scrollbar {
         display: none; /* 스크롤바를 항상 표시 */;
     }
-
+    .close_btn{
+        position: fixed;
+        right: 0;
+        top: 0;
+        display: block;
+        cursor: pointer;
+        user-select: none;
+        width: unset;
+        padding: unset;
+        transform: scale(0.8);
+    }
+.contact{width: 70vw; right: 15vw; z-index: 10;}
+.arrow{padding-bottom: 7px;}
 
     #miniMapContainer {
         display: none;
@@ -574,7 +596,7 @@ overflow: hidden;
         height: 80vh;    background-color: transparent;
         z-index: 1000; /* 다른 요소 위에 표시 */
     }
-
+    .scroll-container{height: unset;}
     #dum1{display: none;}
 #dum2{display: none;}
 #dum3{display: none;}
@@ -593,7 +615,7 @@ overflow: hidden;
       margin-top: 10px;
       margin-right: auto; 
       font-size: 3.5em;
-      z-index: 100;
+      z-index: 20;
       letter-spacing :-0.02em;
       display: flex;
       flex-direction: column;
@@ -676,4 +698,7 @@ overflow: hidden;
         width: 95px;}
         #st59 {
             height: 307px;
-            width: 102px;}}
+            width: 102px;}
+        
+        
+        }
