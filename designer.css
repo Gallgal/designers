@@ -1,5 +1,4 @@
-/*서체 별 유니코드 지정하기*/
-/*영어, 숫자, 특수문자는 헵타*/
+
 @import url('https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@400;500;600&display=swap');
 
 @font-face {
@@ -65,13 +64,14 @@ width: 200px; position: fixed; top: 60vh; right: 2.5vw;}
 
 /*-------나브-------*/
 nav{position: fixed; text-align: right;
+    z-index: 20;
     right: 0; top: 0;
-  margin-top: 30px;
+  margin-top: 20px;
   margin-right: 2.5vw;
   font-family: "Hepta Slab", serif;     
   font-weight: 500;
   font-size: 3em;
-  z-index: 100;
+  z-index: 20;
   letter-spacing :-0.02em;
   display: flex;}
 a{text-decoration: none; color: #000000;}
@@ -201,7 +201,7 @@ input:focus::placeholder {
 #st40{top: 943px; left: 1310px;}
 
 #st41{top: 220px; left: 2480px;}
-#st42{top: 1830px; left: 2540px;}
+#st42{top: 450px; left: 2350px;}
 #st43{top: 1760px; left: 530px; width: 105px;}
 #st44{top: 1330px; left: 600px; height: 285px; width: 93px;}
 #st45{top: 1080px; left: 2270px;}
@@ -225,7 +225,6 @@ input:focus::placeholder {
 #st61{top: 560px; left: 1920px;}
 #st62{top: 1720px; left: 2970px;}
 #st63{top: 1410px; left: 1650px;}
-#st64{top: 490px; left: 2320px; width: 90px;}
 
 
 /*------푸터-------*/
@@ -339,6 +338,9 @@ height: 90vh;
 width: 85vw;
 background: #ffffff;
 overflow: hidden;
+min-height: 600px;
+min-width: 800px;
+z-index: 100;
 }
 .image_container {
 position: absolute;
@@ -356,8 +358,8 @@ object-fit: cover; /* 이미지가 div를 채우도록 설정 */
 }
 .close_btn{
     position: fixed;
-    right:1vw;
-    top: 2vh;
+    right: 0;
+    top: 0;
     font-size: 1.4rem;
     font-weight: 500;
     font-family: 'Pretendard Variable';
@@ -374,10 +376,10 @@ object-fit: cover; /* 이미지가 div를 채우도록 설정 */
     padding:20px;
     display: grid;
     grid-auto-columns: 1fr;
-    grid-template-columns: 23vw 24vw 22.1vw;
+    grid-template-columns: 29% 32% 28.7%;
     grid-template-rows: 1fr;
-    column-gap: 4vw;
-    bottom: 8vh;
+    column-gap: 2vw;
+    bottom: 2vh;
     position: absolute;
     grid-template-areas: "left center right";
     align-items: end; 
@@ -386,7 +388,7 @@ object-fit: cover; /* 이미지가 div를 채우도록 설정 */
     grid-area: left;    
     cursor: default;
     letter-spacing: -0.03em;
-    margin-bottom: -20%;
+    margin-bottom: -10%;
 }
 .prof_img{
     width: 83%;
@@ -403,7 +405,7 @@ object-fit: cover; /* 이미지가 div를 채우도록 설정 */
 .center {
 
     grid-area: center;
-    height: 64vh;
+    height: 70vh;
     display: grid;
     grid-template-rows: repeat(2, min-content) 1fr;
     justify-items: center;
@@ -411,6 +413,7 @@ object-fit: cover; /* 이미지가 div를 채우도록 설정 */
     padding: 20px;
     font-weight: 600;
     position: relative;
+    min-height: 450px;
 }
 .head-container {
     position: absolute;
@@ -467,17 +470,26 @@ object-fit: cover; /* 이미지가 div를 채우도록 설정 */
     position: relative;
     grid-area: right;
     background-color: #1ce157;
-    height: 70vh;
+    height: 76vh;
     scrollbar-width: none;
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 10px;
     font-weight: 600;
+    min-height: 450px;
 }
 
 .scroll-container {
     height: calc(70vh - 10px);        
     overflow-y: auto;
+    min-height: 430px;
+}
+.scroll-container .text p{
+    margin-block-start: unset;
+    margin-block-end: unset;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 160%;
 }
 .text {
     color: rgb(0, 0, 0);
@@ -494,12 +506,13 @@ object-fit: cover; /* 이미지가 div를 채우도록 설정 */
     margin-bottom: 2vh;
 }
 .contact {
-width: 15vw;
-height: 5vh;
+width: 19vw;
+min-width: auto;
+height: 6vh;
 position: fixed;
 background-color: #E0FC61;
 bottom: 0;
-right: 8vw;
+
 text-align: center;
 font-size: 1rem;
 transition: height 0.3s;
@@ -548,16 +561,317 @@ overflow: hidden;
 }
 
 
+/* 뭐이런게 다있어 */
 
 
+		/* -------- 팝업창 -------- */
+		.modal {
+            /*팝업 배경*/
+    
+                display: none; /*평소에는 보이지 않도록*/
+                position: fixed;
+                top:0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                overflow-y: hidden;
+                background: rgba(0,0,0,0.5);
+                z-index: 100;
+            }
+            .modal .work_popup {
+            /*팝업*/
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                height: 90vh;
+                width: 85vw;
+                background: #ffffff;
+                overflow: hidden;
+                display: flex;
+                min-height: 600px;
+                min-width: 800px;   
+    
+                /*min-height: 600px;
+                min-width: 860px;*/
+    
+            }
+    
+            .modal.on {
+                display: block;
+            }
+    
+    
+            /* --------- box1 ----------*/
+    
+    
+            .box1{
+                width: 66%;
+                min-width: 500px;
+                height: 100%;
+                background-color: #000000;
+                display: inline-block;
+                overflow-y: scroll;
+                
+            }
+            .test1{width: 100%; height: 100%; background-color: blue;}
+            .test2{width: 100%; height: 100%; background-color: rgb(120, 120, 234);}
+    
+    
+            /* --------- box2 ----------*/
+    
+    
+    
+            .box2{
+                width: 34%;
+                min-width: 350px;
+                background-color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                overflow: hidden;    
+            }
+            .title{
+                position: relative;
+                left: 0;
+                padding-left: 46px;
+                padding-right: 5rem;
+                padding-top: 24px;
+                padding-bottom: 10px;
+                height: auto;
+                background-color: #ffffff;
+                width: calc(100% - 36px - 4rem);
+                display: block;
+                line-height: 100%;}
+            .title > p{margin:0; font-weight: 600;}
+    
+    
+            .modal .work_popup .close_btn {
+                position: fixed;
+                right: 0;
+                top: 0;
+                display: block;
+                cursor: pointer;
+                user-select: none;
+                box-sizing: unset;
+            }
+                .modal .work_popup .close_btn:hover {
+                    user-select: none;
+                }
+                .close_img{width: 100%; box-sizing: unset; width: 3rem; padding: 1rem;}
+    
+            body::-webkit-scrollbar {
+                    display: none;}
+    
+    
+    
+            .box2 .text{padding: 36px; 
+                padding-top: 0;
+                overflow-y: scroll;
+                height: 74vh;
+                display: block;
+                box-sizing: border-box;
+                width: 100%;}
+    
+            .btnrow{height: 10vh; line-height: 10vh; font-size: 20px; z-index: 2; position: relative;}
+            .button{
+                bottom: 0;
+            width: 50%;
+            padding: 0;
+            text-align: center;
+            font-weight: 500;
+            user-select: none;
+            overflow: hidden;
+            transition: width 0.45s;
+            white-space: nowrap;
+            top: 100%;
+            font-size: 16px; }
+            .button:hover{
+            width: 100%;}
+    
+    
+            /*--------------작품 상세 이미지-------------*/
+            .work_img{width: 100%; margin: 0; pointer-events: none; user-select: none;}
+            img{margin: 0;}
+    
+    
+    
+            /*--------------까꿍-------------*/
+    
+            
+            .peekabu{
+                width: 30%;
+                position: absolute;
+                bottom: -100vh;
+                transition: all 0.45s;
+            z-index: 1;
+            align-items: center;
+            }
+    
+            #otherWork_img{ width: 100%; box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2);}
+            #findWho_img{width: 75%;}
+            #people_pkb{ width: 30%; display: flex; align-items: center; justify-content: center;}
+            #work_pkb{display: flex; align-items: center; justify-content: center;}
+            .otherWork {background-color: #E0FC61;}
+            .findWho { background-color: #000000; color: #ffffff;}
+    
+            #exThumb{width: 100%;}
+            #conThumb{width: 100%;}
+    
+    
+            .no-scroll {
+                overflow: hidden;
+            }
+    
+    
+            .box2 .title {
+                font-size: 1.3vw;
+                line-height: 1.3;
+            }
+    
+            /* con  */
+            #people_pkb_con,
+            #work_pkb_con,
+            #people_pkb_ex,
+            #work_pkb_ex {
+                width: 25vw;    /* 부모 요소의 너비를 설정 */
+                height: auto; /* 부모 요소의 높이를 설정 */
+            }
+    
+            #people_pkb_con img,
+            #work_pkb_con img,
+            #people_pkb_ex img,
+            #work_pkb_ex img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain; /* 부모 크기에 맞게 이미지 비율 유지 */
+            }
+    
+            .work_img{
+                margin-bottom: -2vh;
+            }
+            
+    
+            @media (max-width: 768px) and (orientation: portrait) {
+                .projectgrid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);}
 
-@media (max-width: 768px) and (orientation: portrait) {
+        .modal .indi_popup{
+                width: 100vw;
+                height: 100vh;
+                margin: 0;
+            }
+        nav {
+            position: fixed;
+            text-align: right;
+            right: 0;
+            top: 0;
+            width: 100%;
+            margin-top: 10px;
+            margin-right: auto;
+            font-size: 3.5em;
+            z-index: 2;
+            letter-spacing: -0.02em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: top 0.3s ease; /* 부드러운 전환 효과 추가 */
+            }
+        nav a {margin-top: 1rem; right: 0; height: 30px;}
+        a{text-decoration: none; color: #000000;}
+        #about{width: 3.5em;}
+          #project{width: 4.05em;}
+          #designer{width: 4.9em;}
+          #archive{width: 4.3em;}
+    
+    
+          .footerback{
+            box-sizing: border-box;
+            padding-left: 4.5vw;
+            padding-right: 4.5vw;
+            top: calc(100vh - 100px);
+            height: 100px;
+            width: 100vw;
+            background: white;
+            color:#ABACAD;
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            font-weight: 500;
+            position: fixed;
+        }
+        .logo_footer{ width: 25%; height: 65px;  display: flex; align-items: center; transform: scale(0.7);}
+    
+        .logo{
+            z-index: 1000;
+            width: 140px; 
+            }
+        .project-text {
+        color: black;
+        line-height: 0.45rem;
+        padding-top: 0;
+        margin-left: 0.5rem;
+        font-size: 0.9rem;
+    }
+    #name2{margin-top: 4px;}
+    .project-name {
+        line-height: 18px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+        }
+    .modal .work_popup {
+            height: 100vh;
+        width: 100vw;
+        }
+        #people_pkb_con img, #work_pkb_con img, #people_pkb_ex img, #work_pkb_ex img{ margin: 24px; width: calc(100vw - 48px); margin-bottom: -18px;}
+    .row{flex-direction: column;}
+    .row .btnrow{flex-direction: row; height: 8vh; line-height: 8vh;}
+    .name{margin-top: 10px;
+        margin-bottom: 16px;}
+    .text{padding: 24px; padding-top: 4px;}
+    .text p{font-size: 1rem;     margin-top: 0;}
+    .title{margin-left: 24px; width: unset; padding: unset; padding-top: 20px; padding-bottom: 10px;}
+    .box2{    width: 100%; min-width: unset; align-items: flex-start;}
+    .box1{    width: 100%; min-width: unset; height: 157%;}
+    .box2 .title{font-size: 14pt; padding: 24px; margin: 0;}
+    .ProjectsContainer{padding-top: 24vh}
+    .close_btn{
+        position: fixed;
+        right: 0;
+        top: 0;
+        display: block;
+        cursor: pointer;
+        user-select: none;
+        width: 3rem;
+        padding: 1rem;
+    }
+    .photo-container {
+        width: unset;
+    }
+    .image-1 {
+        width: 28%;
+            }
+            .image-2 {
+        margin-top: 6vh;
+        width: 28%;
+        z-index: 2;
+    }
+    .main-photo {
+        width: 28%;
+    }		
+    #top{width: 90px; user-select: none; position: fixed; bottom: -350px; right: 2.5vw; z-index: 99; transition: all 0.3s;} /* Hidden by default */
+          #top:active{bottom: -160px; filter:blur(0px); -webkit-filter: blur(0px);}
+    
+    .box2 .text {padding: 24px; padding-top: 0;}
     body{
     width: 100vw;}
-    .modal .indi_popup{height: 100vh; width: 100vw; z-index: 101;}
-    .grid{font-size:12pt; display: flex; flex-direction: column; padding-bottom: 10vh; overflow-y: scroll; bottom: unset; align-items: center; gap: 80px;height: 100vh;}
-.right{width: 100%; height: unset;}
-.left{margin: unset;     margin-bottom: 20%;}
+    .modal .indi_popup{height: 100vh; width: 100vw; z-index: 101; min-width: unset; min-height: unset; }
+    .grid{width: 100%; font-size:12pt; display: flex; flex-direction: column; padding-bottom: 10vh; overflow-y: scroll; bottom: unset; align-items: center; gap: 80px;height: 100vh;}
+.right{width: 100%; height: unset; min-height: unset;}
+.center{height: auto; min-height: unset;}
+.left{margin: unset;     margin-bottom: 20%; min-height: unset;}
         .name{margin-left: 20px;}
     .logo{
         z-index: 1000;
@@ -567,7 +881,7 @@ overflow: hidden;
             position: fixed;
         }
     .text{width: unset;}
-    .head-text{margin-left: 3vw;}
+    .head-text{margin-left: 12px}
     .caption{margin-top: 8pt;}
 .prof_img{height: 75vh; width: unset; margin: unset; margin-top: 10vh;}
     ::-webkit-scrollbar {
@@ -581,9 +895,8 @@ overflow: hidden;
         cursor: pointer;
         user-select: none;
         width: unset;
-        padding: unset;
-        transform: scale(0.8);
-    }
+        padding: unset;    
+        z-index: 20;}
 .contact{width: 70vw; right: 15vw; z-index: 10;}
 .arrow{padding-bottom: 7px;}
 
@@ -608,6 +921,8 @@ overflow: hidden;
 #dum9{display: none;}
 #dum10{display: none;}
 
+.modal .work_popup{min-height: unset;
+    min-width: unset}
     nav{position: fixed; 
         text-align: right;
         right: 0; top: 0;
@@ -686,9 +1001,11 @@ overflow: hidden;
       #st44{height: 262px; width: 95px;}
       #st47 {
         height: 310px;}
+        #st49{width: 110px;
+        height: 275px;}
       #st50 {
         width: 110px;
-        height: 275px;}
+        height: 295px;}
         #st51 {
             height: 287px;
             width: 108px;}
@@ -700,5 +1017,9 @@ overflow: hidden;
             height: 307px;
             width: 102px;}
         
+            
         
         }
+
+
+        
